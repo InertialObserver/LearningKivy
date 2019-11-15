@@ -33,7 +33,12 @@ class MyGrid(GridLayout):
         self.add_widget(self.submit)
 
     def pressed(self, instance):
-            print("Pressed")
+            firstname = self.firstname.text
+            lastname = self.lastname.text
+            email = self.email.text
+
+            print("Name:", firstname, "Last Name:", lastname, "Email:", email)
+
 
 
 class MyApp(App):
