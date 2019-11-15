@@ -32,12 +32,15 @@ class MyGrid(GridLayout):
         self.submit.bind(on_press=self.pressed)
         self.add_widget(self.submit)
 
-    def pressed(self, instance):
-            firstname = self.firstname.text
-            lastname = self.lastname.text
-            email = self.email.text
+    def pressed(self, instance):  # Defines the function "pressed"
+            firstname = self.firstname.text # initialize variable 'firstname' to be the text entered in the textbox next to the label 'First Name'
+            lastname = self.lastname.text # As above, except 'Last Name'
+            email = self.email.text # As above, except 'Email'
 
-            print("Name:", firstname, "Last Name:", lastname, "Email:", email)
+            print("Name:", firstname, "Last Name:", lastname, "Email:", email) # Prints the contents of these text boxes to console
+            self.lastname.text = "" # Clears the text box
+            self.firstname.text = "" # Clears the text box
+            self.email.text = "" # Clears the text box
 
 
 
