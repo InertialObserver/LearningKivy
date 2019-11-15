@@ -1,5 +1,22 @@
 <MyGrid>
-    Label:
-        text: "Coding is loads of fun"
-        ## Works with 3 words, but if I have more words the first few are cut off.
-        ## Also, putting a comment after <MyGrid> on line 1 resulted in an error and the program failed.
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Name: "
+
+            TextInput:
+                multiline: False
+
+            Label:
+                text: "Email: "
+
+            TextInput:
+                multiline: False
+
+            Button:
+                text: "Submit"
+        ## Indentation matters.
