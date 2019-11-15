@@ -9,11 +9,11 @@
 ## This is another parent tag
     Button:
         pos_hint: {"x":0.5, "top":1}
-        ## Default position in kivy is the bottom left. The x-axis goes from 0 to 1 and starting position is (0,0)
-        ## The "x" or "y" must be lowercase to work
-        text: "Tech With"
+        text: "Hi Lyra!"
 
     Button:
-        size_hint: 0.2, 0.2
-        ## Using size_hint here overrides the parent tag setting for size_hint
-        text: "Jessi"
+    ## button has a few different states (regular, on click, and something else)
+        id: btn
+        text: "Hi Leo!" if btn.state == "normal" else "Do it again!"
+        background_color: 0.3, .4, .5,1
+
