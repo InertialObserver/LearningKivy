@@ -7,7 +7,7 @@ from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 
 
-class MyGrid(GridLayout):
+class MyGrid(Widget): # Reason the content from the my.kv file is on the bottom left corner of the screen when running the program is because "widget" has a defined size/position
     pass
 
 
