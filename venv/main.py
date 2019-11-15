@@ -8,7 +8,7 @@ from kivy.uix.widget import Widget
 
 
 class MyGrid(Widget): # Reason the content from the my.kv file is on the bottom left corner of the screen when running the program is because "widget" has a defined size/position
-    pass
+    pass # Class objects must have an attribute, otherwise it'll create an exception. This tells Python to ignore it for now, because it's being instanced by another
 
 
 class MyApp(App):
