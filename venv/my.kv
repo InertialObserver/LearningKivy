@@ -1,35 +1,13 @@
-<MyGrid>
+<Button>:
+## This is a parent tag
+    font_size:40
+    color:0.3,0.6,0.7,1
 
-    name: enteredname
-    email: enteredemail
-    ## these are global variables, because they're inside the class
+<FloatLayout>:
+## This is another parent tag
+    Button:
+        post_hint: {"X", "Y", "top", "bottom", "left", "right"}
+        text: "Tech With"
 
-    GridLayout:
-        cols:1
-        size: root.width - 200, root.height - 200
-        # changes width and height to less than the width/height of widget
-        pos: 100, 100
-        # adds padding of 100 to width and height
-
-
-        GridLayout:
-            cols:2
-
-            Label:
-                text: "Name: "
-
-            TextInput:
-                id: enteredname
-                multiline: False
-
-            Label:
-                text: "Email: "
-
-            TextInput:
-                id: enteredemail
-                multiline: False
-
-        Button:
-            text: "Submit"
-            on_press: root.btn()
-        ## This works because the root widget is MyGrid
+    Button:
+        text: "Jessi"
