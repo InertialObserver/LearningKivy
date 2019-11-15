@@ -7,41 +7,7 @@ from kivy.uix.button import Button
 
 
 class MyGrid(GridLayout):
-    def __init__(self, **kwargs):
-        super(MyGrid, self).__init__(**kwargs)
-        self.cols=1
-
-        self.inside = GridLayout()
-        self.inside.cols=2
-
-        self.inside.add_widget(Label(text="First name: "))
-        self.firstname = TextInput(multiline=False)
-        self.inside.add_widget(self.firstname)
-
-        self.inside.add_widget(Label(text="Last Name: "))
-        self.lastname = TextInput(multiline=False)
-        self.inside.add_widget(self.lastname)
-
-        self.inside.add_widget(Label(text="Email: "))
-        self.email = TextInput(multiline=False)
-        self.inside.add_widget(self.email)
-
-        self.add_widget(self.inside)
-
-        self.submit = Button(text="Submit", font_size=40)
-        self.submit.bind(on_press=self.pressed)
-        self.add_widget(self.submit)
-
-    def pressed(self, instance):  # Defines the function "pressed"
-            firstname = self.firstname.text # initialize variable 'firstname' to be the text entered in the textbox next to the label 'First Name'
-            lastname = self.lastname.text # As above, except 'Last Name'
-            email = self.email.text # As above, except 'Email'
-
-            print("Name:", firstname, "Last Name:", lastname, "Email:", email) # Prints the contents of these text boxes to console
-            self.lastname.text = "" # Clears the text box
-            self.firstname.text = "" # Clears the text box
-            self.email.text = "" # Clears the text box
-
+    pass
 
 
 class MyApp(App):
