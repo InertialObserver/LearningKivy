@@ -14,6 +14,8 @@ class MyGrid(Widget): # Reason the content from the my.kv file is on the bottom 
 
     def btn(self): # Defines the button method for "on_press" in my.kv
         print("Name:", self.name.text, "Email:", self.email.text)
+        self.name.text = "" # Clears text box after printing to console
+        self.email.text = ""
 
 class MyApp(App):
     def build(self):
