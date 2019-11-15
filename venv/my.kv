@@ -1,8 +1,10 @@
 <MyGrid>
     GridLayout:
         cols:1
-        size: root.width, root.height
-        # gives the root widget's width and height to the column
+        size: root.width - 200, root.height - 200
+        # changes width and height to less than the width/height of widget
+        pos: 100, 100
+        # adds padding of 100 to width and height
 
 
         GridLayout:
