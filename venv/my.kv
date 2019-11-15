@@ -2,12 +2,17 @@
 ## This is a parent tag
     font_size:40
     color:0.3,0.6,0.7,1
+    size_hint: 0.3, 0.5
 
 <FloatLayout>:
 ## This is another parent tag
     Button:
-        post_hint: {"X", "Y", "top", "bottom", "left", "right"}
+        pos_hint: {"x":0.5, "top":1}
+        ## Default position in kivy is the bottom left. The x-axis goes from 0 to 1 and starting position is (0,0)
+        ## The "x" or "y" must be lowercase to work
         text: "Tech With"
 
     Button:
+        size_hint: 0.2, 0.2
+        ## Using size_hint here overrides the parent tag setting for size_hint
         text: "Jessi"
