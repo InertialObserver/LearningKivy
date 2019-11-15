@@ -5,11 +5,15 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
+from kivy.properties import ObjectProperty
 
 
 class MyGrid(Widget): # Reason the content from the my.kv file is on the bottom left corner of the screen when running the program is because "widget" has a defined size/position
-    pass # Class objects must have an attribute, otherwise it'll create an exception. This tells Python to ignore it for now, because it's being instanced by another
+    name = ObjectProperty(None)
+    email = ObjectProperty(None)
 
+    def btn(self): # Defines the button method for "on_press" in my.kv
+        print("Name:", self.name.text, "Email:", self.email.text)
 
 class MyApp(App):
     def build(self):

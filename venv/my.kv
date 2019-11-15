@@ -1,4 +1,9 @@
 <MyGrid>
+
+    name: enteredname
+    email: enteredemail
+    ## these are global variables, because they're inside the class
+
     GridLayout:
         cols:1
         size: root.width - 200, root.height - 200
@@ -14,14 +19,17 @@
                 text: "Name: "
 
             TextInput:
+                id: enteredname
                 multiline: False
 
             Label:
                 text: "Email: "
 
             TextInput:
+                id: enteredemail
                 multiline: False
 
         Button:
             text: "Submit"
-        ## Indentation matters.
+            on_press: root.btn()
+        ## This works because the root widget is MyGrid
