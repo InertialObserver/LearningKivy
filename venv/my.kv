@@ -1,19 +1,5 @@
-<Button>:
-## This is a parent tag
-    font_size:40
-    color:0.3,0.6,0.7,1
-    size_hint: 0.3, 0.5
-    ## size_hint is by percent of the container. So the above setting is 30% width, 50% height of the container
-
-<FloatLayout>:
-## This is another parent tag
+<Touch>:
+    btn: button
     Button:
-        pos_hint: {"x":0.5, "top":1}
-        text: "Hi Lyra!"
-
-    Button:
-    ## button has a few different states (regular, on click, and something else)
-        id: btn
-        text: "Hi Leo!" if btn.state == "normal" else "Do it again!"
-        background_color: 0.3, .4, .5,1
-
+        id: button
+        text:"My cool button"
